@@ -608,7 +608,7 @@ class CMB2_Field {
 	}
 
 	/**
-	 * Determine if current type is excempt from escaping
+	 * Determine if current type is exempt from escaping
 	 * @since  1.1.0
 	 * @return bool  True if exempt
 	 */
@@ -1049,7 +1049,7 @@ class CMB2_Field {
 			$options = call_user_func( $this->args['options_cb'], $this );
 
 			if ( $options && is_array( $options ) ) {
-				$this->field_options += $options;
+				$this->field_options = $options + $this->field_options;
 			}
 		}
 
